@@ -1,0 +1,19 @@
+
+<h2> Le binding </h2>
+
+
+<h3> One Way </h3>
+
+<p> {{ salutation == null ? "null" : salutation.msg }} </p>
+<a [href]="google" target="_blank">vers google</a>
+
+<h3> Two Way </h3>
+
+<label for="input-nom">Quel est votre nom ? </label>
+<input type="text" name="nom" id="input-nom" [(ngModel)]="nom"><br>
+
+<p>Votre nom est : {{ nom }} </p>
+
+<h3 #monSousTitre> Binding d'élément </h3>
+
+<p> {{ monSousTitre.innerText }} </p>

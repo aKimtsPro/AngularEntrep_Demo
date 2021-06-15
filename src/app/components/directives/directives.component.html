@@ -1,0 +1,75 @@
+<h2> Les directives </h2>
+
+<p>Il existe plusieurs type de directives</p>
+<dl>
+    <dt>Les components</dt>
+    <dd> app-directives par exemple </dd>
+    
+    <dt>Les directives d'Attribut</dt>
+    <dd> Permet de toucher au style </dd>
+    
+    <dt>Les directives structurelles</dt>
+    <dd> Manipulation du DOM </dd>
+</dl>
+
+<h3>Les directives d'attribut</h3>
+
+<input type="number" name="" id="" placeholder="votre age" [(ngModel)]="age">
+
+<p> Le texte suivant est soumi à ngClass : <span [ngClass]="{ biffe: age < 18, 'red-color': age >= 5 }" > majeur </span> </p>
+
+<input type="color" name="" id="" [(ngModel)]="color">
+
+<p > Le texte suivant est soumi à un ngStyle : <span [ngStyle]="{ 'color': color }"> texte coloré </span> </p>
+<p> meme chose mais différemment : <span [style.background-color]="color"> texte coloré </span></p>
+
+<h3> Les directives structurelles </h3>
+
+<h4>*ngIf</h4>
+
+<input type="text" placeholder="votre nom?" [(ngModel)]="nom">
+
+<p *ngIf="nom && nom.length >= 10">Vous avez un très long nom</p>
+
+<p [style.visibility]=" (nom && nom.length >= 10) ? 'visible' : 'hidden' ">Vous avez un très long nom</p>
+
+<p [hidden]="!nom || nom.length < 10">Vous avez un très long nom</p>
+
+
+<h4>[ngSwitch]</h4>
+
+<select name="" id="" [(ngModel)]="selectedColor">
+    <option value="-">-</option>
+    <option value="red">rouge</option>
+    <option value="blue">bleu</option>
+    <option value="green">vert</option>
+</select>
+
+<div [ngSwitch]="selectedColor">
+    <div class="carre" [style.background-color]="'red'" *ngSwitchCase="'red'">
+
+    </div>
+    <div class="carre" [style.background-color]="'blue'" *ngSwitchCase="'blue'">
+
+    </div>
+    <div class="carre" [style.background-color]="'green'"  *ngSwitchCase="'green'">
+
+    </div>
+    <div class="carre" [style.background-color]="'gray'" *ngSwitchDefault>
+
+    </div>
+</div>
+
+<h4>*ngFor</h4>
+
+<ul>
+    <li *ngFor="let prenom of prenoms; let i = index">{{i}} - {{ prenom }} </li>
+</ul>
+
+<h3>Les événements</h3>
+
+<button class="btn btn-info" (click)="onClick( $event )">click on me</button>
+
+<div class="carre" [style.background-color]="color" (mouseenter)="onMouseEnter()">
+
+</div>
