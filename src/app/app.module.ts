@@ -6,12 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BindingComponent } from './components/binding/binding.component';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { NavComponent } from './components/nav/nav.component';
+import { RedirectComponent } from './components/redirect/redirect.component';
+import { Page404Component } from './components/page404/page404.component';
+import { ParamComponent } from './components/param/param.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    NavComponent,
+    RedirectComponent,
+    Page404Component,
+    ParamComponent
   ],
   imports: [
     BrowserModule,
