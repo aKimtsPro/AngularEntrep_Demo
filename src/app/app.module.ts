@@ -10,6 +10,11 @@ import { NavComponent } from './components/nav/nav.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { Page404Component } from './components/page404/page404.component';
 import { ParamComponent } from './components/param/param.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { VoiturePipe } from './pipes/voiture.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { EnfantAComponent } from './components/parent/enfant-a/enfant-a.component';
+import { EnfantBComponent } from './components/parent/enfant-b/enfant-b.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import { ParamComponent } from './components/param/param.component';
     NavComponent,
     RedirectComponent,
     Page404Component,
-    ParamComponent
+    ParamComponent,
+    PipesComponent,
+    VoiturePipe,
+    ParentComponent,
+    EnfantAComponent,
+    EnfantBComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+<h2>Communication parent <-> enfant </h2>
+
+<div class="row">
+    <div class="col-6">
+        <app-enfant-a (add-name)="onAddName( $event )"></app-enfant-a>
+    </div>
+    <div class="col-6">
+        <app-enfant-b [list-nom]="listNom" input="salut"></app-enfant-b>
+    </div>
+</div>
