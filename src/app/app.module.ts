@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { VoiturePipe } from './pipes/voiture.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { EnfantAComponent } from './components/parent/enfant-a/enfant-a.component';
 import { EnfantBComponent } from './components/parent/enfant-b/enfant-b.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,14 @@ import { EnfantBComponent } from './components/parent/enfant-b/enfant-b.componen
     VoiturePipe,
     ParentComponent,
     EnfantAComponent,
-    EnfantBComponent
+    EnfantBComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BindingComponent } from './components/binding/binding.component';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { FormComponent } from './components/form/form.component';
 import { Page404Component } from './components/page404/page404.component';
 import { ParamComponent } from './components/param/param.component';
 import { ParentComponent } from './components/parent/parent.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'param/:nbr', component: ParamComponent, canActivate: [ NumberParamGuard ] },
   {path:'pipe', component: PipesComponent },
   { path: 'com', component: ParentComponent },
+  { path: 'form', component: FormComponent },
   { path: '404', component: Page404Component},
   { path: '**', redirectTo:'404'}
 ];

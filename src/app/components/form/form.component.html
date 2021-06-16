@@ -1,0 +1,21 @@
+
+<h3>Formulaire avec ReactiveFormsModule</h3>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="input-nom">Nom:</label><br>
+        <input type="text" id="input-nom" formControlName="nom" >
+    </div>
+    <div>
+        <label for="input-prenom">Prenom:</label><br>
+        <input type="text" id="input-prenom" formControlName="prenom">
+    </div>
+    <div>
+        <label for="input-age">Age:</label><br>
+        <input type="number" id="input-age"  formControlName="age">
+    </div> 
+
+    <button type="submit">envoyer</button>
+
+</form>
