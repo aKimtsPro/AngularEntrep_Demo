@@ -8,6 +8,7 @@ import { ParamComponent } from './components/param/param.component';
 import { ParentComponent } from './components/parent/parent.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
+import { ServiceComponent } from './components/service/service.component';
 import { NumberParamGuard } from './guards/number-param.guard';
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'pipe', component: PipesComponent },
   { path: 'com', component: ParentComponent },
   { path: 'form', component: FormComponent },
+  { path: 'service', component: ServiceComponent },
   { path: '404', component: Page404Component},
   { path: '**', redirectTo:'404'}
 ];

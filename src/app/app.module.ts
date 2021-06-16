@@ -16,6 +16,10 @@ import { ParentComponent } from './components/parent/parent.component';
 import { EnfantAComponent } from './components/parent/enfant-a/enfant-a.component';
 import { EnfantBComponent } from './components/parent/enfant-b/enfant-b.component';
 import { FormComponent } from './components/form/form.component';
+import { ServiceComponent } from './components/service/service.component';
+import { ServEnfantBComponent } from './components/service/serv-enfant-b/serv-enfant-b.component';
+import { ServEnfantAComponent } from './components/service/serv-enfant-a/serv-enfant-a.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,13 +35,17 @@ import { FormComponent } from './components/form/form.component';
     ParentComponent,
     EnfantAComponent,
     EnfantBComponent,
-    FormComponent
+    FormComponent,
+    ServiceComponent,
+    ServEnfantBComponent,
+    ServEnfantAComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
